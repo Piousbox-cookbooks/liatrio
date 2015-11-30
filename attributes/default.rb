@@ -18,11 +18,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-default[:home][:packages]            = %w( wget curl )
+default[:home][:centos][:packages]   = %w( wget curl git emacs iptables-services )
+default[:home][:ubuntu][:packages]   = %w( wget curl git emacs )
 default[:home][:sleep_interval]      = 20
-default[:home][:open_ports]          = %w(
-  8080
-)
+default[:home][:open_ports]          = %w( 80 8080 8081 8082 8083 8084 8085 3000 3001 3002 3002 3004 3005)
 
 default['home'].tap do |home|
   #
@@ -53,3 +52,9 @@ default['home'].tap do |home|
                       'java'
                     end
 end
+
+
+
+
+
+
